@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Gavin Mogan</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,8 +11,15 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/app.css">
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -20,11 +27,189 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="img/Gavin-December-1989.png" />
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#projects" aria-controls="projects" role="tab" data-toggle="tab">Projects <span class="sr-only">(current)</span></a></li>
+                        <li class=""><a href="#presentations" aria-controls="presentations" role="tab" data-toggle="tab">Presentations</a></li>
+                        <li class=""><a href="#volunteer" aria-controls="volunteer" role="tab" data-toggle="tab">Volunteering</a></li>
+                        <li class=""><a href="#">Resume</a></li>
+                        <li class=""><a href="mailto:website@gavinmogan.com">Contact</a></li>
+                        <!--
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Applications<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://apps.gavinmogan.com/infinicatr/">Infinicatr (???)</a></li>
+                                <li><a href="http://apps.gavinmogan.com/ingrid/">Ingrid Intimidator (???)</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Presentations  <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://presentations.gavinmogan.com/react-vs-angular/">React Vs Angular (June 2015)</a></li>
+                                <li><a href="http://presentations.gavinmogan.com/stats/">Stats (May 2015)</a></li>
+                                <li><a href="#">Linux 101 (March 2015)</a></li>
+                                <li><a href="#">Devops (Jan 2015)</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                        -->
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="projects">
+                <div class="container">
+
+                    <div class="well media">
+                        <div class="media-left">
+                            <a href="http://books.saltystories.ca/">
+                                <img class="media-object" src="./img/projects/saltystories.png" alt="Salty Stories" style="height: 128px; width: 128px; /*fixme*/" />
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h2 class="media-heading">Salty Stories - Web</h2>
+                            <div>Web version of the salty stories mobile applications</div>
+                        </div>
+                    </div>
+
+                    <div class="well media">
+                        <div class="media-left">
+                            <a href="http://zabox.gavinmogan.com/">
+                                <img class="media-object" src="./img/projects/zabox.png" alt="Salty Stories" style="height: 128px; width: 128px; /*fixme*/" />
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h2 class="media-heading">Zabox</h2>
+                            <div>Development SMTP server with web interface</div>
+                            <div><a href="https://github.com/halkeye/zabox">Github</a></div>
+                        </div>
+                    </div>
+
+                    <div class="well media">
+                        <div class="media-left">
+                            <a href="http://apps.gavinmogan.com/infinicatr/">
+                                <img class="media-object" src="./img/projects/infinicatr.png" alt="Infinicatr" style="height: 128px; width: 128px; /*fixme*/" />
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h2 class="media-heading">Infinicatr</h2>
+                            <div>Small little web app I created for <a href="https://www.mozilla.org/en-US/firefox/os/2.0/">Firefox OS</a> to learn how it works</div>
+                            <div><a href="https://github.com/halkeye/infinicatr">Github</a></div>
+                        </div>
+                    </div>
+
+                    <div class="well media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="./img/projects/ingrid-intimidator.png" alt="Ingrid Intimidator" style="height: 128px; width: 128px; /*fixme*/" />
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h2 class="media-heading">Ingrid Intimidator</h2>
+                            <div>I wanted an excuse to play with some html5 audio and canvas, so created a fun little game for <a href="http://www.criticalhitshow.com/">Critical Hit Show.</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="presentations">
+                <div class="container">
+
+                    <div class="well media">
+                        <div class="media-left">
+                            <a href="http://presentations.gavinmogan.com/react-vs-angular/">
+                                <img class="media-object" src="#" alt="..." style="height: 128px; width: 128px; /*fixme*/" />
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h2 class="media-heading">React Vs Angular (June 2015)</h2>
+                            <span class="label label-primary">Internal</span>
+                            <div>Description of presentation</div>
+                        </div>
+                    </div>
+
+                    <div class="well media">
+                        <div class="media-left">
+                            <a href="http://presentations.gavinmogan.com/stats/">
+                                <img class="media-object" src="#" alt="..." style="height: 128px; width: 128px; /*fixme*/" />
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h2 class="media-heading">Stats (May 2015)</h2>
+                            <span class="label label-primary">Internal</span>
+                            <div>Description of presentation</div>
+                        </div>
+                    </div>
+
+                    <div class="well media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="#" alt="..." style="height: 128px; width: 128px; /*fixme*/" />
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h2 class="media-heading">Linux 101 (March 2015)</h2>
+                            <span class="label label-primary">Internal</span>
+                            <div>Description of presentation</div>
+                        </div>
+                    </div>
+
+                    <div class="well media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="#" alt="..." style="height: 128px; width: 128px; /*fixme*/" />
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h2 class="media-heading">Devops (Jan 2015)</h2>
+                            <span class="label label-primary">Internal</span>
+                            <div>Description of presentation</div>
+                        </div>
+                    </div>
+
+                    <div class="well">
+                        <h2>Legend</h2>
+                        <div>
+                            <span class="label label-primary">Internal</span>
+                            Presentations designed to give at work. May not make a lot of sense out of context
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+
         <script src="js/plugins.js"></script>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
