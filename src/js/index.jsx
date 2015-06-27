@@ -17,14 +17,21 @@ const {Route, RouteHandler, DefaultRoute, NotFoundRoute} = Router;
 
 const App = React.createClass({
   render () {
-    return (
-      <div>
-        <Nav />
-        <div className="container">
-          <RouteHandler/>
-        </div>
-      </div>
-    );
+      var ga = null;
+      if(typeof GA_TRACKING_CODE !== 'undefined') {
+          ga = "<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');";
+          ga = ga + "ga('create', '" + GA_TRACKING_CODE + "', 'auto');";
+          ga = ga + "ga('send', 'pageview');";
+          ga = ga + "</script>";
+          ga = <span dangerouslySetInnerHTML={{__html: ga}} />;
+     }
+      return (
+          <div>
+              <Nav />
+              <RouteHandler/>
+              {ga}
+          </div>
+      );
   }
 });
 

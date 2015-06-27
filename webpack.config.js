@@ -2,8 +2,8 @@
 var path = require('path');
 
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
 var evaluate = require('eval');
 var Promise = require('bluebird');
 var config = require('./src/js/config.js');
@@ -36,6 +36,11 @@ GavinPlugin.prototype.emitHtml = function(compilation, htmlTemplateContent, temp
         delete compilation.assets[scriptPath];
     });
 };
+
+var defines = {};
+if (process.env.NODE_ENV === 'production') {
+    defines.GA_TRACKING_CODE = JSON.stringify('UA-89920-18');
+}
 
 var sassLoaders = [
     'css-loader',
@@ -83,6 +88,7 @@ module.exports = {
     },
 
     plugins: [
+        new webpack.DefinePlugin(defines),
         new ExtractTextPlugin('styles/[name]-[hash].css'),
         new GavinPlugin({ inject: true, template: './src/index.html' })
     ],
