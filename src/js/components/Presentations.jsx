@@ -9,45 +9,41 @@ export default class Presentations extends React.Component {
                 <h1>Presentations</h1>
                 <ItemBlock key="react-vs-angular"
                     link="http://presentations.gavinmogan.com/react-vs-angular/"
-                    img="#"
                     title="React Vs Angular (June 2015)"
                     lanels={["internal"]}
                 >
-                    <div>Description of presentation</div>
+                    <div>Tried to show off some of the things that react does better than angular to the team.</div>
                 </ItemBlock>
 
                 <ItemBlock key="stats"
                     link="http://presentations.gavinmogan.com/stats/"
-                    img="#"
                     title="Stats (May 2015)"
                     lanels={["internal"]}
                 >
-                    <div>Description of presentation</div>
+                    <div>Gave a brief overview of how stats can be useful and some examples</div>
                 </ItemBlock>
 
                 <ItemBlock key="linux101"
-                    link="#"
-                    img="#"
+                    link="http://presentations.gavinmogan.com/linux101/"
                     title="Linux 101 (March 2015)"
                     lanels={["internal"]}
                 >
-                    <div>Description of presentation</div>
+                    <div>Shared some of my linux CLI knowledge</div>
                 </ItemBlock>
 
                 <ItemBlock key="devops"
-                    link="#"
-                    img="#"
+                    link="http://presentations.gavinmogan.com/devops/"
                     title="Devops (Jan 2015)"
                     lanels={["internal"]}
                 >
-                    <div>Description of presentation</div>
+                    <div>Presentation on sharing my devops interest to align our team on what needs to be done next and why</div>
                 </ItemBlock>
 
                 <div className="well">
                     <h2>Legend</h2>
                     <div>
                         <span className="label label-primary">Internal</span>
-                        Presentations designed to give at work. May not make a lot of sense out of context
+                        Presentations designed to give at work. May not make a lot of sense out of context.
                     </div>
                 </div>
             </div>

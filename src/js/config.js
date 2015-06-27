@@ -1,7 +1,11 @@
 'use strict';
-class Config {
-  constructor() {
-  }
+function Config() {
+    this.links = [
+        { link: "projects", name: "Projects" },
+        { link: "presentations", name: "Presentations" },
+        { link: "volunteering", name: "Volunteering" },
+        { link: "about", name: "About" }
+    ];
 }
 
-export default new Config();
+module.exports = new Config();

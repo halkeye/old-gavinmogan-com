@@ -6,21 +6,11 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var evaluate = require('eval');
 var Promise = require('bluebird');
+var config = require('./src/js/config.js');
 
 function GavinPlugin(options) {
   this.options = options || {};
 }
-
-var data = {
-    title: "Gavin Mogan",
-    routes: [
-        '/',
-        '/projects',
-        '/presentations',
-        '/volunteering',
-        '/contact'
-    ]
-};
 
 GavinPlugin.prototype = new HtmlWebpackPlugin();
 GavinPlugin.prototype.constructor = GavinPlugin;
@@ -29,7 +19,7 @@ GavinPlugin.prototype.emitHtml = function(compilation, htmlTemplateContent, temp
     var scriptPath = 'bundle.js';
     var source = compilation.assets[scriptPath].source();
     var render = evaluate(source, /* filename: */ undefined, /* scope: */ undefined, /* noGlobals: */ true);
-    var renderPromises = data.routes.map(function(outputPath) {
+    var renderPromises = config.links.map(function(link) { return "/" + link.link; }).map(function(outputPath) {
         var locals = { path: outputPath };
         return Promise
           .fromNode(render.bind(null, locals))

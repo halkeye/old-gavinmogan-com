@@ -8,7 +8,7 @@ const Main = require('./components/Main.jsx');
 const Presentations = require('./components/Presentations.jsx');
 const Projects = require('./components/Projects.jsx');
 const Volunteering = require('./components/Volunteering.jsx');
-const Contact = require('./components/Contact.jsx');
+const About = require('./components/About.jsx');
 
 const config = require('./config.js');
 require('../styles/main.scss');
@@ -34,7 +34,7 @@ var routes = (
     <Route name="projects" handler={Projects} />
     <Route name="presentations" handler={Presentations} />
     <Route name="volunteering" handler={Volunteering} />
-    <Route name="contact" handler={Contact} />
+    <Route name="about" handler={About} />
   </Route>
 );
 
