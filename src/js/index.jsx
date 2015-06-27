@@ -39,10 +39,8 @@ var routes = (
 );
 
 if (typeof document !== 'undefined') {
-    var router = Router.create({routes});
-    config.router = router;
-    router.run(function (Handler, state) {
-      React.render(<Handler/>, document/*.body*/);
+    Router.run(routes, Router.HistoryLocation, function(Handler, state) {
+      React.render(<Handler/>, document.body);
 //      analytics(state);
     });
 }
@@ -50,6 +48,6 @@ if (typeof document !== 'undefined') {
 module.exports = function render (locals, callback) {
     Router.run(routes, locals.path, function (Handler) {
         var html = React.renderToString(React.createElement(Handler, locals));
-        callback(null, '<!DOCTYPE html>' + html);
+        callback(null, html);
     });
 };

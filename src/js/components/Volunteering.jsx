@@ -8,6 +8,7 @@ export default class Presentations extends React.Component {
             <div className="container">
                 <h1>Volunteering and Hangouts</h1>
                 <ItemBlock key="ladies-learning-code"
+                    img="https://pbs.twimg.com/profile_images/614135444775825409/GHWE979-_reasonably_small.png"
                     link="http://ladieslearningcode.com/chapters/vancouver/"
                     title="Ladies Learning Code Vancouver"
                 />

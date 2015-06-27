@@ -36,7 +36,7 @@ export default class Nav extends React.Component {
                     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul className="nav navbar-nav">
                             {this.links.map((link) => {
-                                if (config.router.isActive(link.link)) {
+                                if (this.context.router.isActive(link.link)) {
                                     return <li key={link.link} className="active"><Link to={link.link}>{link.name} <span className="sr-only">(current)</span></Link></li>;
                                 } else {
                                     return <li key={link.link}><Link to={link.link}>{link.name}</Link></li>;
@@ -50,3 +50,6 @@ export default class Nav extends React.Component {
     }
 }
 
+Nav.contextTypes = {
+    router: React.PropTypes.any
+};
