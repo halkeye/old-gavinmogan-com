@@ -29,8 +29,7 @@ export default class Presentations extends React.Component {
                     img={require('../../img/projects/ingrid-intimidator.png')}
                     title="Ingrid Intimidator"
                 >
-                    <div>Small little web app I created for <a href="https://www.mozilla.org/en-US/firefox/os/2.0/">Firefox OS</a> to learn how it works</div>
-                    <div><a href="https://github.com/halkeye/infinicatr">Github</a></div>
+                    <div>I wanted an excuse to play with some html5 audio and canvas, so created a fun little game for <a href="http://www.criticalhitshow.com/">Critical Hit Show.</a></div>
                 </ItemBlock>
 
 
@@ -39,7 +38,8 @@ export default class Presentations extends React.Component {
                     img={require('../../img/projects/infinicatr.png')}
                     title="Infinicatr"
                 >
-                    <div>I wanted an excuse to play with some html5 audio and canvas, so created a fun little game for <a href="http://www.criticalhitshow.com/">Critical Hit Show.</a></div>
+                    <div>Small little web app I created for <a href="https://www.mozilla.org/en-US/firefox/os/2.0/">Firefox OS</a> to learn how it works</div>
+                    <div><a href="https://github.com/halkeye/infinicatr">Github</a></div>
                 </ItemBlock>
             </div>
         );
