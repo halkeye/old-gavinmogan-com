@@ -31,7 +31,7 @@ Config.prototype.makeMetaTags = function makeMetaTags(data) {
         metaData.meta.name['og:title'] = metaData.title;
     }
     if (data.description) {
-        metaData.descripton = data.description;
+        metaData.description = data.description;
         metaData.meta.name['twitter:description'] = metaData.description;
         metaData.meta.name['og:description'] = metaData.description;
     }
