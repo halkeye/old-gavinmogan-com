@@ -13,7 +13,11 @@ Config.prototype.makeMetaTags = function makeMetaTags(data) {
         title: 'Gavin Mogan Dot Com',
         //canonical: 'https://www.gavinmogan.com/',
         meta: {
+            'httpEquiv': {
+                'x-ua-compatible': 'ie=edge'
+            },
             name: {
+                'viewport': 'width=device-width, initial-scale=1',
                 'twitter:card': 'summary',
                 'twitter:site': '@halkeye',
                 'twitter:creator': '@halkeye'
