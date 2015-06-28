@@ -58,3 +58,10 @@ module.exports = function render (locals, callback) {
         callback(null, html);
     });
 };
+module.exports.routes = function() {
+    var paths = [ routes.props.path ];
+    routes.props.children.forEach(function(route) {
+        paths.push(routes.props.path + route.props.name);
+    });
+    return paths;
+};

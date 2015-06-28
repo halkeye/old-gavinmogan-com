@@ -19,7 +19,7 @@ GavinPlugin.prototype.emitHtml = function(compilation, htmlTemplateContent, temp
     var scriptPath = 'bundle.js';
     var source = compilation.assets[scriptPath].source();
     var render = evaluate(source, /* filename: */ undefined, /* scope: */ undefined, /* noGlobals: */ true);
-    var renderPromises = config.links.map(function(link) { return "/" + link.link; }).concat('/').map(function(outputPath) {
+    var renderPromises = render.routes().map(function(outputPath) {
         var locals = { path: outputPath };
         return Promise
           .fromNode(render.bind(null, locals))
