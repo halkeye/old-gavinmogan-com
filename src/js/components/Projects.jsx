@@ -1,11 +1,15 @@
 'use strict';
 const React = require('react');
+const DocumentMeta = require('react-document-meta');
+const config = require('../config.js');
 const ItemBlock = require('./ItemBlock.jsx');
 
 export default class Presentations extends React.Component {
     render() {
+        const metaData = config.makeMetaTags({ title: 'Projects', description: "Some of the projects Gavin has worked on"});
         return (
             <div className="container">
+                <DocumentMeta {...metaData} />
                 <h1>Projects</h1>
                 <ItemBlock key="react-saltystories"
                     link="http://books.saltystories.ca/"

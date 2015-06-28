@@ -1,5 +1,6 @@
 'use strict';
 const React = require('react');
+const DocumentMeta = require('react-document-meta');
 const Router = require('react-router');
 const analytics = require('ga-react-router');
 
@@ -17,6 +18,7 @@ const {Route, RouteHandler, DefaultRoute, NotFoundRoute} = Router;
 
 const App = React.createClass({
   render () {
+      const metaData = config.makeMetaTags({});
       var ga = null;
       if(typeof GA_TRACKING_CODE !== 'undefined') {
           ga = "<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');";
@@ -24,9 +26,10 @@ const App = React.createClass({
           ga = ga + "ga('send', 'pageview');";
           ga = ga + "</script>";
           ga = <span dangerouslySetInnerHTML={{__html: ga}} />;
-     }
+      }
       return (
           <div>
+              <DocumentMeta {...metaData} />
               <Nav />
               <RouteHandler/>
               {ga}
@@ -54,13 +57,15 @@ if (typeof document !== 'undefined') {
 
 module.exports = function render (locals, callback) {
     Router.run(routes, locals.path, function (Handler) {
-        var html = React.renderToString(React.createElement(Handler, locals));
-        callback(null, html);
+        var body = React.renderToString(React.createElement(Handler, locals)) || '';
+        var head = DocumentMeta.rewind({ asHtml: true }) || '';
+        callback(null, {head: head, body: body});
     });
 };
 module.exports.routes = function() {
     var paths = [ routes.props.path ];
     routes.props.children.forEach(function(route) {
+        if (route.type === DefaultRoute) { return; }
         paths.push(routes.props.path + route.props.name);
     });
     return paths;

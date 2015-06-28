@@ -7,6 +7,7 @@
     "isarray": "0.0.1",
     "json-loader": "^0.5.2",
     "react": "^0.13.3",
+    "react-document-meta": "^0.1.4",
     "react-router": "^0.13.3"
   },
   "devDependencies": {

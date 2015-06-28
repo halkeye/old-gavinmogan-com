@@ -9,7 +9,7 @@ var Promise = require('bluebird');
 var config = require('./src/js/config.js');
 
 function GavinPlugin(options) {
-  this.options = options || {};
+    this.options = options || {};
 }
 
 GavinPlugin.prototype = new HtmlWebpackPlugin();
@@ -23,10 +23,9 @@ GavinPlugin.prototype.emitHtml = function(compilation, htmlTemplateContent, temp
         var locals = { path: outputPath };
         return Promise
           .fromNode(render.bind(null, locals))
-          .then(function(output) {
-            output = htmlTemplateContent.replace('</body>', output+'</body>');
-            output = output.replace('<script src="/' + scriptPath + '"></script>', '');
-            HtmlWebpackPlugin.prototype.emitHtml.call(that, compilation, output, templateParams, path.join(outputPath, '/index.html'));
+          .then(function(content) {
+              var output = "<!DOCTYPE html>\n<html>\n<head>\n" + content.head + "</head>\n<body>\n" + content.body + "\n</body>\n</html>\n";
+              HtmlWebpackPlugin.prototype.emitHtml.call(that, compilation, output, templateParams, path.join(outputPath, '/index.html'));
           })
           .catch(function(err) {
               console.log('err', err);

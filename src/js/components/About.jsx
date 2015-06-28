@@ -1,5 +1,7 @@
 'use strict';
 const React = require('react');
+const DocumentMeta = require('react-document-meta');
+const config = require('../config.js');
 const ItemBlock = require('./ItemBlock.jsx');
 
 export default class Contact extends React.Component {
@@ -38,8 +40,10 @@ export default class Contact extends React.Component {
     }
 
     render() {
+        const metaData = config.makeMetaTags({ title: 'About', description: 'About Gavin Mogan'});
         return (
             <div className="container">
+                <DocumentMeta {...metaData} />
                 <h1>Gavin Mogan</h1>
                 <p>Part Developer, Part Sysadmin, Part problem solver. All around nerd.</p>
                 <h2>Employment</h2>

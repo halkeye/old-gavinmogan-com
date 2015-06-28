@@ -1,11 +1,15 @@
 'use strict';
 const React = require('react');
+const DocumentMeta = require('react-document-meta');
+const config = require('../config.js');
 const ItemBlock = require('./ItemBlock.jsx');
 
 export default class Presentations extends React.Component {
     render() {
+        const metaData = config.makeMetaTags({ title: 'Presentations', description: "The presentations Gavin has given"});
         return (
             <div className="container">
+                <DocumentMeta {...metaData} />
                 <h1>Presentations</h1>
                 <ItemBlock key="react-vs-angular"
                     link="http://presentations.gavinmogan.com/react-vs-angular/"
