@@ -46,6 +46,8 @@ export default class Contact extends React.Component {
                 <DocumentMeta {...metaData} />
                 <h1>Gavin Mogan</h1>
                 <p>Part Developer, Part Sysadmin, Part problem solver. All around nerd.</p>
+                <h2>Location</h2>
+                <p>Burnaby, BC, Canada</p>
                 <h2>Employment</h2>
                 <p><a href="http://telus.com">TELUS</a></p>
                 <h2>Where can you find me?</h2>
