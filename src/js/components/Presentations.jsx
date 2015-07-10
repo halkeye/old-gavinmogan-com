@@ -43,6 +43,14 @@ export default class Presentations extends React.Component {
                     <div>Presentation on sharing my devops interest to align our team on what needs to be done next and why</div>
                 </ItemBlock>
 
+                <ItemBlock key="vim"
+                    link="https://www.youtube.com/watch?v=__SJWsWSD9M"
+                    img="https://i.ytimg.com/vi/__SJWsWSD9M/mqdefault.jpg"
+                    title="Rough Vim Q &amp; A"
+                >
+                    <div>I did a quick tutorial session for my last workplace. Covers a lot of the vim basics. <b>Warning:</b> Does have a couple minor swear words like shit</div>
+                </ItemBlock>
+
                 <div className="well">
                     <h2>Legend</h2>
                     <div>
