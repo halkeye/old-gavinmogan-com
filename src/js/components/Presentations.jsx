@@ -14,7 +14,7 @@ export default class Presentations extends React.Component {
                 <ItemBlock key="react-vs-angular"
                     link="http://presentations.gavinmogan.com/react-vs-angular/"
                     title="React Vs Angular (June 2015)"
-                    lanels={["internal"]}
+                    labels={["internal"]}
                 >
                     <div>Tried to show off some of the things that react does better than angular to the team.</div>
                 </ItemBlock>
@@ -22,7 +22,7 @@ export default class Presentations extends React.Component {
                 <ItemBlock key="stats"
                     link="http://presentations.gavinmogan.com/stats/"
                     title="Stats (May 2015)"
-                    lanels={["internal"]}
+                    labels={["internal"]}
                 >
                     <div>Gave a brief overview of how stats can be useful and some examples</div>
                 </ItemBlock>
@@ -30,7 +30,7 @@ export default class Presentations extends React.Component {
                 <ItemBlock key="linux101"
                     link="http://presentations.gavinmogan.com/linux101/"
                     title="Linux 101 (March 2015)"
-                    lanels={["internal"]}
+                    labels={["internal"]}
                 >
                     <div>Shared some of my linux CLI knowledge</div>
                 </ItemBlock>
@@ -38,7 +38,7 @@ export default class Presentations extends React.Component {
                 <ItemBlock key="devops"
                     link="http://presentations.gavinmogan.com/devops/"
                     title="Devops (Jan 2015)"
-                    lanels={["internal"]}
+                    labels={["internal"]}
                 >
                     <div>Presentation on sharing my devops interest to align our team on what needs to be done next and why</div>
                 </ItemBlock>
