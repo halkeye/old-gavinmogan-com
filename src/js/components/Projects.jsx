@@ -17,6 +17,7 @@ export default class Presentations extends React.Component {
                     title="Salty Stories - Web"
                 >
                     <div>Web version of the salty stories mobile applications</div>
+                    <div><a href="https://github.com/halkeye/react-book-reader">Github</a></div>
                 </ItemBlock>
 
                 <ItemBlock key="zabox"
