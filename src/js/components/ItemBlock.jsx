@@ -9,7 +9,7 @@ export default class ItemBlock extends React.Component {
     render() {
         if (this.props.img) {
             return (
-                <div className="well media">
+                <div className="well media" id={this.props.name}>
                     <div className="media-left">
                         <a href={this.props.link}>
                             <img className="media-object" src={this.props.img} alt={this.props.title} style={{'height': '128px', 'width': '128px' }} />
@@ -26,7 +26,7 @@ export default class ItemBlock extends React.Component {
             );
         } else {
             return (
-                <div className="well">
+                <div className="well" id={this.props.name}>
                     <h2 className="media-heading"><a href={this.props.link}>{this.props.title}</a></h2>
                     {this.props.labels.map((label) => {
                         return <span className="label label-primary">{label}</span>;

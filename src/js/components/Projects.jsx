@@ -11,7 +11,9 @@ export default class Presentations extends React.Component {
             <div className="container">
                 <DocumentMeta {...metaData} />
                 <h1>Projects</h1>
-                <ItemBlock key="react-saltystories"
+                <ItemBlock
+                    key="saltystories"
+                    name="saltystories"
                     link="http://books.saltystories.ca/"
                     img={require('../../img/projects/saltystories.png')}
                     title="Salty Stories - Web"
@@ -20,7 +22,9 @@ export default class Presentations extends React.Component {
                     <div><a href="https://github.com/halkeye/react-book-reader">Github</a></div>
                 </ItemBlock>
 
-                <ItemBlock key="zabox"
+                <ItemBlock
+                    key="zabox"
+                    name="zabox"
                     link="http://zabox.gavinmogan.com/"
                     img={require('../../img/projects/zabox.png')}
                     title="Zabox"
@@ -29,7 +33,9 @@ export default class Presentations extends React.Component {
                     <div><a href="https://github.com/halkeye/zabox">Github</a></div>
                 </ItemBlock>
 
-                <ItemBlock key="ingrid-intimidator"
+                <ItemBlock
+                    key="ingrid_intimidator"
+                    name="ingrid_intimidator"
                     link="http://apps.gavinmogan.com/ingrid/"
                     img={require('../../img/projects/ingrid-intimidator.png')}
                     title="Ingrid Intimidator"
@@ -38,7 +44,9 @@ export default class Presentations extends React.Component {
                 </ItemBlock>
 
 
-                <ItemBlock key="infinicatr"
+                <ItemBlock
+                    key="infinicatr"
+                    name="infinicatr"
                     link="http://apps.gavinmogan.com/infinicatr/"
                     img={require('../../img/projects/infinicatr.png')}
                     title="Infinicatr"
@@ -48,7 +56,9 @@ export default class Presentations extends React.Component {
                     <div><a href="https://chrome.google.com/webstore/detail/infinicatr/dikkcbebmfnedmojoipnoonmionakoka">Chrome App</a></div>
                 </ItemBlock>
 
-                <ItemBlock key="npm_modules"
+                <ItemBlock
+                    key="npm_modules"
+                    name="npm_modules"
                     link="https://www.npmjs.com/~halkeye"
                     title="NPM Modules"
                 >
