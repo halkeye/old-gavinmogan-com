@@ -45,6 +45,7 @@ export default class Presentations extends React.Component {
                 >
                     <div>Small little web app I created for <a href="https://www.mozilla.org/en-US/firefox/os/2.0/">Firefox OS</a> to learn how it works</div>
                     <div><a href="https://github.com/halkeye/infinicatr">Github</a></div>
+                    <div><a href="https://chrome.google.com/webstore/detail/infinicatr/dikkcbebmfnedmojoipnoonmionakoka">Chrome App</a></div>
                 </ItemBlock>
 
                 <ItemBlock key="npm_modules"
