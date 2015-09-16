@@ -11,6 +11,14 @@ export default class Presentations extends React.Component {
             <div className="container">
                 <DocumentMeta {...metaData} />
                 <h1>Presentations</h1>
+                
+                <ItemBlock key="codecoffee-vagrant"
+                    link="http://slides.com/halkeye/give-your-development-a-portable-home-with-vagrant"
+                    title="Give your development a portable home with Vagrant (Sept 2015)"
+                    labels={["meetup"]}
+                >
+                    <div>Vagrant presentation for <a href="https://www.meetup.com/Code-Coffee-Vancouver/events/224950040/">Code Coffee Vancouver</a>. It was my first attempt at doing one for a large group.</div>
+                </ItemBlock>
                 <ItemBlock key="react-vs-angular"
                     link="http://presentations.gavinmogan.com/react-vs-angular/"
                     title="React Vs Angular (June 2015)"
@@ -56,6 +64,8 @@ export default class Presentations extends React.Component {
                     <div>
                         <span className="label label-primary">Internal</span>
                         Presentations designed to give at work. May not make a lot of sense out of context.
+                        <span className="label label-primary">Meetup</span>
+                        Presentations I did for meetups
                     </div>
                 </div>
             </div>
