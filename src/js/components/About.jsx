@@ -49,7 +49,7 @@ export default class Contact extends React.Component {
                 <h2>Location</h2>
                 <p>Burnaby, BC, Canada</p>
                 <h2>Employment</h2>
-                <p><a href="http://telus.com">TELUS</a></p>
+                <p><a href="https://www.saucelabs.com">Sauce Labs</a></p>
                 <h2>Where can you find me?</h2>
                 <p><a href="https://twitter.com/halkeye"><i className="fa fa-twitter"></i> @halkeye</a></p>
                 <p><a href="https://github.com/halkeye"><i className="fa fa-github"></i> Github</a></p>
