@@ -66,7 +66,7 @@ export default class Presentations extends React.Component {
                     <div>Various NPM modules I've published</div>
                 </ItemBlock>
 
-                <hr />
+                <h2>Legacy Projects</h2>
 
                 <ItemBlock
                     key="dark_warriors"
