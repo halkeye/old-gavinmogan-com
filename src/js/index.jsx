@@ -55,6 +55,11 @@ if (typeof document !== 'undefined') {
 }
 
 module.exports = function render (locals, callback) {
+    if (typeof String.prototype.endsWith !== 'function') {
+        String.prototype.endsWith = function(suffix) {
+            return this.indexOf(suffix, this.length - suffix.length) !== -1;
+        };
+    }
     Router.run(routes, locals.path, function (Handler) {
         var styles = Object.keys(locals.webpackStats.compilation.assets).filter(function(style) {
             return style.endsWith('.css');
