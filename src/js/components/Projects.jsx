@@ -66,13 +66,14 @@ export default class Presentations extends React.Component {
                     <div>Various NPM modules I've published</div>
                 </ItemBlock>
 
-                <h2>Legacy Projects</h2>
+                <h2>Legacy / KodeKoan Projects</h2>
 
                 <ItemBlock
                     key="dark_warriors"
                     name="dark_warriors"
                     link="https://github.com/halkeye/darkwarriors/releases/tag/dw-0.0.1361"
                     title="Dark Warriors"
+                    img={require('../../img/kodekoan.jpg')}
                     labels={["muds"]}
                 >
                     <div>
@@ -88,6 +89,7 @@ export default class Presentations extends React.Component {
                     link="https://github.com/halkeye/unknown_regions/releases/tag/ur-1.0.12"
                     title="Unknown Regions"
                     date="2001-07-16"
+                    img={require('../../img/kodekoan.jpg')}
                     labels={["muds"]}
                 >
                     <div>
@@ -96,6 +98,33 @@ export default class Presentations extends React.Component {
                         <p>Looking back it kinda makes me cringe, but its a big part of me.</p>
                     </div>
                 </ItemBlock>
+
+                <ItemBlock
+                    key="kode_foto_backup"
+                    name="kode_foto_backup"
+                    link="https://github.com/halkeye/kode_foto_backup/releases/tag/1.0.0"
+                    title="Kode Foto Backup"
+                    img={require('../../img/kodekoan.jpg')}
+                >
+                    <div>
+                        <p>Some tool for a long lost open source service that livejournal used to run</p>
+                        <p>One of my first C# programs</p>
+                    </div>
+                </ItemBlock>
+                <ItemBlock
+                    key="MTLJPost"
+                    name="MTLJPost"
+                    link="https://github.com/halkeye/MTLJPost"
+                    title="MTLJPost"
+                    img={require('../../img/kodekoan.jpg')}
+                >
+                    <div>
+                        <p>Long time ago in a galaxy far far away, I was using Moveable Type as a blogging engine.</p>
+                        <p>This is a tool I wrote that cross posted things to livejournal. It was pretty popular and I got to know most of the major users.</p>
+                    </div>
+                </ItemBlock>
+
+                
             </div>
         );
     }
