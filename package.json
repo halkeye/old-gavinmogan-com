@@ -1,6 +1,10 @@
 {
   "name": "gavinmogan_dot_com",
   "version": "0.0.1",
+  "scripts": {
+    "dev": "node ./server.dev.js",
+    "build": "rm -rf dist && NODE_ENV=production webpack -p"
+  },
   "dependencies": {
     "bootstrap-sass": "^3.3.4",
     "font-awesome": "^4.3.0",
@@ -46,6 +50,5 @@
   },
   "engines": {
     "node": ">=0.10.0"
-  },
-  "scripts": {}
+  }
 }
