@@ -56,12 +56,30 @@ if (typeof document !== 'undefined') {
 
 module.exports = function render (locals, callback) {
     Router.run(routes, locals.path, function (Handler) {
-        var styles = Object.keys(locals.webpackStats.compilation.assets).map(function(style) {
+        var styles = Object.keys(locals.webpackStats.compilation.assets).filter(function(style) {
+            return style.endsWith('.css');
+        }).map(function(style) {
             return '<link rel="stylesheet" type="text/css" href="/'+style+'">';
         }).join('');
+
+        var scripts = Object.keys(locals.webpackStats.compilation.assets).filter(function(script) {
+            return script.endsWith('.js');
+        }).map(function(script) {
+            return '<script src="/'+script+'"></script>';
+        }).join('');
+
         var body = React.renderToString(React.createElement(Handler, locals)) || '';
         var head = DocumentMeta.rewind({ asHtml: true }) || '';
-        callback(null, '<!DOCTYPE html><html><head>' + head + styles + '</head><body>' + body + '</body></html><!-- ' + require('util').inspect() + '-->');
+        var output = [
+            '<!DOCTYPE html><html><head>',
+            head,
+            styles,
+            '</head><body>',
+            body,
+            scripts,
+            '</body></html>'
+        ].join('');
+        callback(null, output);
     });
 };
 

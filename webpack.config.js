@@ -33,7 +33,7 @@ module.exports = {
     entry: [ './src/js/index' ],
 
     output: {
-        filename: 'bundle.js',
+        filename: 'bundle-[hash].js',
         path: path.join(__dirname, './dist'),
         publicPath: '/',
         /* IMPORTANT!
