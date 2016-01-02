@@ -11,6 +11,7 @@ export default class Presentations extends React.Component {
             <div className="container">
                 <DocumentMeta {...metaData} />
                 <h1>Projects</h1>
+                <p>There's a lot more projects on my <a href="https://github.com/halkeye"><i className="fa fa-github"></i> Github</a></p>
                 <ItemBlock
                     key="saltystories"
                     name="saltystories"
