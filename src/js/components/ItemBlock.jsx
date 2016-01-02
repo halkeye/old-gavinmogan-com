@@ -18,7 +18,7 @@ export default class ItemBlock extends React.Component {
                     <div className="media-body">
                         <h2 className="media-heading"><a href={this.props.link}>{this.props.title}</a></h2>
                         {this.props.labels.map((label) => {
-                            return <span className="label label-primary">{label}</span>;
+                            return <span key={label} className="label label-primary">{label}</span>;
                         })}
                         {this.props.children}
                     </div>
@@ -29,7 +29,7 @@ export default class ItemBlock extends React.Component {
                 <div className="well" id={this.props.name}>
                     <h2 className="media-heading"><a href={this.props.link}>{this.props.title}</a></h2>
                     {this.props.labels.map((label) => {
-                        return <span className="label label-primary">{label}</span>;
+                        return <span key={label} className="label label-primary">{label}</span>;
                     })}
                     {this.props.children}
                 </div>
