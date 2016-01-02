@@ -1,40 +1,12 @@
+/*eslint-env node */
+/*eslint quotes: [2, "single"], curly: 2*/
 'use strict';
 var path = require('path');
 
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 var webpack = require('webpack');
-var evaluate = require('eval');
-var Promise = require('bluebird');
 var config = require('./src/js/config.js');
-
-function GavinPlugin(options) {
-    this.options = options || {};
-}
-
-GavinPlugin.prototype = new HtmlWebpackPlugin();
-GavinPlugin.prototype.constructor = GavinPlugin;
-GavinPlugin.prototype.emitHtml = function(compilation, htmlTemplateContent, templateParams, outputFilename) {
-    var that = this;
-    var scriptPath = 'bundle.js';
-    var source = compilation.assets[scriptPath].source();
-    var render = evaluate(source, /* filename: */ undefined, /* scope: */ undefined, /* noGlobals: */ true);
-    var renderPromises = render.routes().map(function(outputPath) {
-        var locals = { path: outputPath };
-        return Promise
-          .fromNode(render.bind(null, locals))
-          .then(function(content) {
-              var output = "<!DOCTYPE html>\n<html>\n<head>\n" + content.head + "</head>\n<body>\n" + content.body + "\n</body>\n</html>\n";
-              HtmlWebpackPlugin.prototype.emitHtml.call(that, compilation, output, templateParams, path.join(outputPath, '/index.html'));
-          })
-          .catch(function(err) {
-              console.log('err', err);
-          });
-    });
-    return Promise.all(renderPromises).then(function() {
-        delete compilation.assets[scriptPath];
-    });
-};
 
 var defines = {};
 if (process.env.NODE_ENV === 'production') {
@@ -53,15 +25,20 @@ var scssLoaders = [
     'sass-loader?includePaths[]=' + path.resolve(__dirname, './src') + '&includePaths[]=' + path.resolve(__dirname, './node_modules')
 ];
 
+var paths = ['/'].concat(config.links.map(function(link) {
+    return '/' + link.link;
+}));
+
 module.exports = {
-    entry: [
-        './src/js/index'
-    ],
+    entry: [ './src/js/index' ],
 
     output: {
         filename: 'bundle.js',
         path: path.join(__dirname, './dist'),
         publicPath: '/',
+        /* IMPORTANT!
+         * You must compile to UMD or CommonJS
+         * so it can be required in a Node context: */
         libraryTarget: 'umd'
     },
 
@@ -89,7 +66,7 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin(defines),
         new ExtractTextPlugin('styles/[name]-[hash].css'),
-        new GavinPlugin({ inject: true, template: './src/index.html' })
+        new StaticSiteGeneratorPlugin('main', paths, { /* locals */ })
     ],
 
     resolve: {

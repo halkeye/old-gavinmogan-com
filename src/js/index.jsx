@@ -51,17 +51,20 @@ var routes = (
 if (typeof document !== 'undefined') {
     Router.run(routes, Router.HistoryLocation, function(Handler, state) {
       React.render(<Handler/>, document.body);
-//      analytics(state);
     });
 }
 
 module.exports = function render (locals, callback) {
     Router.run(routes, locals.path, function (Handler) {
+        var styles = Object.keys(locals.webpackStats.compilation.assets).map(function(style) {
+            return '<link rel="stylesheet" type="text/css" href="/'+style+'">';
+        }).join('');
         var body = React.renderToString(React.createElement(Handler, locals)) || '';
         var head = DocumentMeta.rewind({ asHtml: true }) || '';
-        callback(null, {head: head, body: body});
+        callback(null, '<!DOCTYPE html><html><head>' + head + styles + '</head><body>' + body + '</body></html><!-- ' + require('util').inspect() + '-->');
     });
 };
+
 module.exports.routes = function() {
     var paths = [ routes.props.path ];
     routes.props.children.forEach(function(route) {

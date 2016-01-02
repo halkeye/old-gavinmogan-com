@@ -8,7 +8,7 @@ var PORT = 3000;
 config.devtool = '#eval';
 //config.devtool = '#inline-source-map';
 if (0) {
-  config.entry.unshift( 'webpack-dev-server/client?http://' + require('os').hostname() + ':' + PORT );
+  config.entry.unshift( 'webpack-dev-server/client?https://dev.gavinmogan.com' );
   config.entry.unshift( 'webpack/hot/only-dev-server' );
   config.plugins.unshift( new webpack.HotModuleReplacementPlugin() );
   config.module.loaders.forEach(function(elm) {
@@ -23,15 +23,11 @@ var server = new WebpackDevServer(compiler, {
   contentBase: config.output.path,
   quiet: false,
   noInfo: false,
-  //publicPath: '/books/',
   hot: true,
   stats: { colors: true },
-  cache: false,
-  proxy: {
-    '/optik_feedback/*': 'http://tye-st.telus.com/'
-  }
+  cache: false
 });
 
-server.listen(PORT, require('os').hostname(), function () {
+server.listen(PORT, '0.0.0.0', function () {
   console.log('Listening on ' + PORT);
 });

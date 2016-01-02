@@ -2,7 +2,6 @@
 const React = require('react');
 const DocumentMeta = require('react-document-meta');
 const config = require('../config.js');
-const ItemBlock = require('./ItemBlock.jsx');
 
 export default class Contact extends React.Component {
     constructor(props) {
