@@ -65,6 +65,37 @@ export default class Presentations extends React.Component {
                 >
                     <div>Various NPM modules I've published</div>
                 </ItemBlock>
+
+                <hr />
+
+                <ItemBlock
+                    key="dark_warriors"
+                    name="dark_warriors"
+                    link="https://github.com/halkeye/darkwarriors/releases/tag/dw-0.0.1361"
+                    title="Dark Warriors"
+                    labels={["muds"]}
+                >
+                    <div>
+                        <p>One of the two mud projects I really worked on.</p>
+
+                        <p>This one is done by both Mark Gottselig and myself (Gavin Mogan), as well as a few other people submitting various pieces along the way.</p>
+                    </div>
+                </ItemBlock>
+
+                <ItemBlock
+                    key="unknown_regions"
+                    name="unknown_regions"
+                    link="https://github.com/halkeye/unknown_regions/releases/tag/ur-1.0.12"
+                    title="Unknown Regions"
+                    date="2001-07-16"
+                    labels={["muds"]}
+                >
+                    <div>
+                        <p>My first mud project. Where I learned all the fun things to do with network programming and linux and such.</p>
+
+                        <p>Looking back it kinda makes me cringe, but its a big part of me.</p>
+                    </div>
+                </ItemBlock>
             </div>
         );
     }
