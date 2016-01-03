@@ -70,6 +70,16 @@ export default class Presentations extends React.Component {
                 <h2>Legacy / KodeKoan Projects</h2>
 
                 <ItemBlock
+                    key="ecmproject"
+                    name="ecmproject"
+                    link="https://ecm.apps.gavinmogan.com"
+                    title="Electronic Convention Management"
+                >
+                    <p>A project I worked on with <a href="https://twitter.com/Uch1koma">Stephen Tiu</a> for some of the various conventions we volunteered at. It was an attempt to be a self manage ticketing system that could easily be resued year to year.</p>
+                    <div><a href="https://github.com/halkeye/ecmproject">Github</a></div>
+                </ItemBlock>
+
+                <ItemBlock
                     key="dark_warriors"
                     name="dark_warriors"
                     link="https://github.com/halkeye/darkwarriors/releases/tag/dw-0.0.1361"
@@ -124,8 +134,6 @@ export default class Presentations extends React.Component {
                         <p>This is a tool I wrote that cross posted things to livejournal. It was pretty popular and I got to know most of the major users.</p>
                     </div>
                 </ItemBlock>
-
-                
             </div>
         );
     }
