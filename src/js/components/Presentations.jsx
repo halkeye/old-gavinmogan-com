@@ -11,7 +11,13 @@ export default class Presentations extends React.Component {
             <div className="container">
                 <DocumentMeta {...metaData} />
                 <h1>Presentations</h1>
-                
+                <ItemBlock key="codecoffee-why-not-testing"
+                    link="http://slides.com/halkeye/why-not-testing"
+                    title="Why not Testing? (April 2016)"
+                    labels={["meetup"]}
+                >
+                    <div>Testing presentation for <a href="http://www.meetup.com/Code-Coffee-Vancouver/events/230135012/">Code Coffee Vancouver</a>. Goal was to show that testing doesn't have to be perfect, any you can really start anywhere.</div>
+                </ItemBlock>
                 <ItemBlock key="codecoffee-vagrant"
                     link="http://slides.com/halkeye/give-your-development-a-portable-home-with-vagrant"
                     title="Give your development a portable home with Vagrant (Sept 2015)"
