@@ -41,10 +41,10 @@ const App = React.createClass({
 var routes = (
   <Route handler={App} path="/">
     <DefaultRoute name="home" handler={Projects} />
-    <Route name="projects" handler={Projects} />
-    <Route name="presentations" handler={Presentations} />
-    <Route name="volunteering" handler={Volunteering} />
-    <Route name="about" handler={About} />
+    <Route name="projects/" handler={Projects} />
+    <Route name="presentations/" handler={Presentations} />
+    <Route name="volunteering/" handler={Volunteering} />
+    <Route name="about/" handler={About} />
   </Route>
 );
 
