@@ -17,6 +17,7 @@ export default class Presentations extends React.Component {
                     labels={["meetup"]}
                 >
                     <div>Testing presentation for <a href="http://www.meetup.com/Code-Coffee-Vancouver/events/230135012/">Code Coffee Vancouver</a>. Goal was to show that testing doesn't have to be perfect, any you can really start anywhere.</div>
+                    <div><a href="https://www.youtube.com/watch?v=iPGSJVASCkc">Youtube Recording</a></div>
                 </ItemBlock>
                 <ItemBlock key="codecoffee-vagrant"
                     link="http://slides.com/halkeye/give-your-development-a-portable-home-with-vagrant"
