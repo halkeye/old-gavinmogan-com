@@ -11,7 +11,9 @@ export default class Presentations extends React.Component {
             <div className="container">
                 <DocumentMeta {...metaData} />
                 <h1>Presentations</h1>
-                <ItemBlock key="codecoffee-why-not-testing"
+                <ItemBlock
+                    key="codecoffee-why-not-testing"
+                    name="codecoffee-why-not-testing"
                     link="http://slides.com/halkeye/why-not-testing"
                     title="Why not Testing? (April 2016)"
                     labels={["meetup"]}
@@ -19,14 +21,18 @@ export default class Presentations extends React.Component {
                     <div>Testing presentation for <a href="http://www.meetup.com/Code-Coffee-Vancouver/events/230135012/">Code Coffee Vancouver</a>. Goal was to show that testing doesn't have to be perfect, any you can really start anywhere.</div>
                     <div><a href="https://www.youtube.com/watch?v=iPGSJVASCkc">Youtube Recording</a></div>
                 </ItemBlock>
-                <ItemBlock key="codecoffee-vagrant"
+                <ItemBlock
+                    key="codecoffee-vagrant"
+                    name="codecoffee-vagrant"
                     link="http://slides.com/halkeye/give-your-development-a-portable-home-with-vagrant"
                     title="Give your development a portable home with Vagrant (Sept 2015)"
                     labels={["meetup"]}
                 >
                     <div>Vagrant presentation for <a href="https://www.meetup.com/Code-Coffee-Vancouver/events/224950040/">Code Coffee Vancouver</a>. It was my first attempt at doing one for a large group.</div>
                 </ItemBlock>
-                <ItemBlock key="react-vs-angular"
+                <ItemBlock
+                    key="react-vs-angular"
+                    name="react-vs-angular"
                     link="http://presentations.gavinmogan.com/react-vs-angular/"
                     title="React Vs Angular (June 2015)"
                     labels={["internal"]}
@@ -34,7 +40,9 @@ export default class Presentations extends React.Component {
                     <div>Tried to show off some of the things that react does better than angular to the team.</div>
                 </ItemBlock>
 
-                <ItemBlock key="stats"
+                <ItemBlock
+                    key="stats"
+                    name="stats"
                     link="http://presentations.gavinmogan.com/stats/"
                     title="Stats (May 2015)"
                     labels={["internal"]}
@@ -42,7 +50,9 @@ export default class Presentations extends React.Component {
                     <div>Gave a brief overview of how stats can be useful and some examples</div>
                 </ItemBlock>
 
-                <ItemBlock key="linux101"
+                <ItemBlock
+                    key="linux101"
+                    name="linux101"
                     link="http://presentations.gavinmogan.com/linux101/"
                     title="Linux 101 (March 2015)"
                     labels={["internal"]}
@@ -50,7 +60,9 @@ export default class Presentations extends React.Component {
                     <div>Shared some of my linux CLI knowledge</div>
                 </ItemBlock>
 
-                <ItemBlock key="devops"
+                <ItemBlock
+                    key="devops"
+                    name="devops"
                     link="http://presentations.gavinmogan.com/devops/"
                     title="Devops (Jan 2015)"
                     labels={["internal"]}
@@ -58,7 +70,9 @@ export default class Presentations extends React.Component {
                     <div>Presentation on sharing my devops interest to align our team on what needs to be done next and why</div>
                 </ItemBlock>
 
-                <ItemBlock key="vim"
+                <ItemBlock
+                    key="vim"
+                    name="vim"
                     link="https://www.youtube.com/watch?v=__SJWsWSD9M"
                     img="https://i.ytimg.com/vi/__SJWsWSD9M/mqdefault.jpg"
                     title="Rough Vim Q &amp; A"
