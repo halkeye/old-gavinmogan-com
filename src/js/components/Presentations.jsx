@@ -11,6 +11,15 @@ export default class Presentations extends React.Component {
             <div className="container">
                 <DocumentMeta {...metaData} />
                 <h1>Presentations</h1>
+                
+                <ItemBlock
+                    key="codecoffee-no-rest-for-the-wicked"
+                    name="codecoffee-no-rest-for-the-wicked"
+                    link="http://slides.com/halkeye/no-rest-for-the-wicked"
+                    title="No REST for the wicked? (July 2016)"
+                    labels={["meetup"]}
+                >
+                </ItemBlock>
                 <ItemBlock
                     key="codecoffee-why-not-testing"
                     name="codecoffee-why-not-testing"
