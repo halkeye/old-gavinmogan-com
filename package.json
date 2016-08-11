@@ -31,7 +31,7 @@
     "imports-loader": "^0.6.4",
     "jshint-jenkins-checkstyle-reporter": "^0.1.2",
     "jsx-loader": "^0.13.2",
-    "karma": "~0.12.9",
+    "karma": "~1.2.0",
     "karma-jasmine": "^0.1.5",
     "karma-junit-reporter": "^0.2.2",
     "karma-ng-html2js-preprocessor": "~0.1.0",
