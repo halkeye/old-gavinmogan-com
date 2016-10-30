@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 # Install app dependencies
 COPY package.json /tmp/
 RUN cd /tmp && NODE_ENV=development npm install
-RUN mkdir -p /usr/src/app && mv /tmp/node_modules /usr/src/app && RM /tmp/package.json
+RUN mkdir -p /usr/src/app && mv /tmp/node_modules /usr/src/app && rm /tmp/package.json
 
 COPY . /usr/src/app/
 RUN npm run build && npm prune --production
