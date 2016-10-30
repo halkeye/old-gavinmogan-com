@@ -15,7 +15,6 @@ export default class Volunteering extends React.Component {
         <Header title='Projects' description='Some of the projects Gavin has worked on' url={this.props.url} />
         <div className='container'>
           <h1>Projects</h1>
-          <h1>Projects</h1>
           <p>There's a lot more projects on my <a href='https://github.com/halkeye'><i className='fa fa-github'></i> Github</a></p>
           <ItemBlock
             key='saltystories'
