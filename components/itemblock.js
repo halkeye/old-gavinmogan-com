@@ -1,11 +1,5 @@
 'use strict';
 import React from 'react';
-import css from 'next/css';
-
-const style = css({
-  height: '128px',
-  width: '128px'
-});
 
 export default class ItemBlock extends React.Component {
   static get propTypes () {
@@ -34,9 +28,15 @@ export default class ItemBlock extends React.Component {
     if (this.props.img) {
       return (
         <div className="well media" id={this.props.name}>
+          <style jsx>{`
+            .itemImg {
+              height: 128px;
+              width: 128px;
+            }
+          `}</style>
           <div className="media-left">
             <a href={this.props.link}>
-              <img className={`media-object ${style}`} src={this.props.img} alt={this.props.title} />
+              <img className='media-object itemImg' src={this.props.img} alt={this.props.title} />
             </a>
           </div>
           <div className="media-body">

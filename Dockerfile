@@ -1,4 +1,4 @@
-FROM node:6.6.0
+FROM node:7.8
 MAINTAINER Gavin Mogan <docker@gavinmogan.com>
 EXPOSE 3000
 ENV NODE_ENV=production

@@ -2,17 +2,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import css from 'next/css';
-
-const navBarBrandStyle = css({ paddingTop: 0 });
-const navBarBrandImgStyle = css({
-  border: 0,
-  borderRadius: '50%',
-  height: '50px',
-  width: '50px',
-  margin: 0,
-  padding: 0
-});
 
 export default class Header extends React.Component {
   static get propTypes () {
@@ -38,6 +27,21 @@ export default class Header extends React.Component {
     ];
     return (
       <div>
+        <style jsx>{`
+
+          .navBarBrandStyle {
+            padding-top: 0;
+          }
+
+          .navBarBrandImgStyle {
+            border: 0;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            margin: 0;
+            padding: 0;
+          }
+        `}</style>
         <Head>
           <title>{title}</title>
           <link rel='canonical' href='https://www.gavinmogan.com/' />
@@ -58,8 +62,8 @@ export default class Header extends React.Component {
         <nav className="navbar navbar-default">
           <div className="container-fluid">
             <div className="navbar-header">
-              <Link href="/" className={`navbar-brand ${navBarBrandStyle}`}>
-                <img src='/static/img/Gavin-December-1989.png' className={navBarBrandImgStyle}/>
+              <Link href="/" className='navbar-brand navBarBrandStyle'>
+                <img src='/static/img/Gavin-December-1989.png' className='navBarBrandImgStyle'/>
               </Link>
             </div>
 
@@ -68,9 +72,9 @@ export default class Header extends React.Component {
               {
                 pages.map((page, idx) => {
                   if (this.props.url.pathname.indexOf(page[0]) === 0) {
-                    return (<li key={idx} className="active"><Link href={page[0]}>{page[1]} <span className="sr-only">(current)</span></Link></li>);
+                    return (<li key={idx} className="active"><Link href={page[0]}><a>{page[1]} <span className="sr-only">(current)</span></a></Link></li>);
                   } else {
-                    return (<li key={idx}><Link href={page[0]}>{page[1]} </Link></li>);
+                    return (<li key={idx}><Link href={page[0]}><a>{page[1]} </a></Link></li>);
                   }
                 })
               }
