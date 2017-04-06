@@ -4,6 +4,9 @@
       "jsx": true
     }
   },
-  "extends": ["eslint:recommended", "semistandard", "plugin:react/recommended"],
-  "plugins": [ "react" ]
+  "extends": ["eslint:recommended", "standard", "plugin:react/recommended"],
+  "plugins": [ "react" ],
+  "rules": {
+    "semi": [2, "always"]
+  }
 }
