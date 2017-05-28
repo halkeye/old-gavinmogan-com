@@ -1,5 +1,4 @@
 def imageName = "quay.io/halkeye/gavinmogan-dot-com";
-def app
 node {
   def app;
   stage('Checkout') {
