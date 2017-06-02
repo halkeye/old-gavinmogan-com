@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "ga-react-router": "^2.1.0",
-    "next": "^2.4.0",
+    "next": "^2.4.1",
     "react": "^15.3.0",
     "react-dom": "^15.4.2"
   },
