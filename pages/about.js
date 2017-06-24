@@ -29,8 +29,8 @@ export default class About extends React.Component {
   renderInput (field, name) {
     return (
       <div className="form-group">
-      <label htmlFor={field}>{name}</label>
-      <input type="text" className="form-control" id={field} placeholder={name} value={this.state.subject} onChange={this.handleChange.bind(this, field)} />
+        <label htmlFor={field}>{name}</label>
+        <input type="text" className="form-control" id={field} placeholder={name} value={this.state.subject} onChange={this.handleChange.bind(this, field)} />
       </div>
     );
   }
@@ -38,8 +38,8 @@ export default class About extends React.Component {
   renderText (field, name) {
     return (
       <div className="form-group">
-      <label htmlFor={field}> {name} </label>
-      <textarea id={field} className="form-control" rows="3" style={{ width: '100%' }} onChange={this.handleChange.bind(this, field)}>{this.state.body}</textarea>
+        <label htmlFor={field}> {name} </label>
+        <textarea id={field} className="form-control" rows="3" style={{ width: '100%' }} onChange={this.handleChange.bind(this, field)}>{this.state.body}</textarea>
       </div>
     );
   }
