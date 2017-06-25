@@ -1,17 +1,18 @@
 'use strict';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class ItemBlock extends React.Component {
   static get propTypes () {
     return {
-      img: React.PropTypes.string,
-      name: React.PropTypes.string,
-      title: React.PropTypes.string,
-      labels: React.PropTypes.array,
-      link: React.PropTypes.string,
-      children: React.PropTypes.oneOfType([
-        React.PropTypes.arrayOf(React.PropTypes.node),
-        React.PropTypes.node
+      img: PropTypes.string,
+      name: PropTypes.string,
+      title: PropTypes.string,
+      labels: PropTypes.array,
+      link: PropTypes.string,
+      children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node
       ])
     };
   }

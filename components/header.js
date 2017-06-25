@@ -2,13 +2,14 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 
 export default class Header extends React.Component {
   static get propTypes () {
     return {
-      url: React.PropTypes.object.isRequired,
-      title: React.PropTypes.string,
-      description: React.PropTypes.string
+      url: PropTypes.object.isRequired,
+      title: PropTypes.string,
+      description: PropTypes.string
     };
   }
   static get defaultProps () {
