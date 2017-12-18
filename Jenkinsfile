@@ -20,7 +20,7 @@ node {
 
       /* Push the image to Docker Hub, using credentials we have setup separately on the worker node */
       withDockerRegistry([credentialsId: 'halkeye_quay', url: 'https://quay.io']) {
-        app.push "${imageName}:${commitHash}"
+        app.push commitHash
         app.push 'latest'
       }
     }
