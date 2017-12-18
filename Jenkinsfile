@@ -1,5 +1,5 @@
 def imageName = "quay.io/halkeye/gavinmogan-dot-com";
-node('docker-dind-slave') {
+node {
   def app;
   stage('Checkout') {
     /* Checkout the code we are currently running against */
