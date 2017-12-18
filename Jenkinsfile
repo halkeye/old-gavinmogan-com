@@ -1,10 +1,13 @@
 def imageName = "quay.io/halkeye/gavinmogan-dot-com";
 node {
-  def app;
-  def commitHash;
+  def app
+  def commitHash
+  def branchName
   stage('Checkout') {
     /* Checkout the code we are currently running against */
-    commitHash = checkout(scm).GIT_COMMIT
+    def scmVars = checkout(scm)
+    commitHash = scmVars.GIT_COMMIT
+    branchName = scmVars.GIT_BRANCH
   }
 
   stage('Build') {
@@ -12,11 +15,14 @@ node {
     app = docker.build "${imageName}:${commitHash}"
   }
 
-  stage('Publish') {
-    /* Push the image to Docker Hub, using credentials we have setup separately on the worker node */
-    withDockerRegistry([credentialsId: 'halkeye_quay', url: 'https://quay.io']) {
-      app.push "${imageName}:${commitHash}"
-      app.push 'latest'
+  if (branchName == "master") {
+    stage('Publish') {
+
+      /* Push the image to Docker Hub, using credentials we have setup separately on the worker node */
+      withDockerRegistry([credentialsId: 'halkeye_quay', url: 'https://quay.io']) {
+        app.push "${imageName}:${commitHash}"
+        app.push 'latest'
+      }
     }
   }
 }
