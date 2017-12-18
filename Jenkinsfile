@@ -6,7 +6,7 @@ node {
   stage('Checkout') {
     /* Checkout the code we are currently running against */
     def scmVars = checkout(scm)
-    commitHash = scmVars.GIT_COMMIT
+    commitHash = scmVars.GIT_COMMIT.take(6)
     branchName = scmVars.GIT_BRANCH
   }
 
