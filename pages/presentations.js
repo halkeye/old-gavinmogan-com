@@ -1,12 +1,13 @@
 'use strict';
 import React from 'react';
+import PropTypes from 'prop-types';
 import Header from '../components/header.js';
 import ItemBlock from '../components/itemblock.js';
 
 export default class Volunteering extends React.Component {
   static get propTypes () {
     return {
-      url: React.PropTypes.object.isRequired
+      url: PropTypes.object.isRequired
     };
   }
   render () {
@@ -30,7 +31,7 @@ export default class Volunteering extends React.Component {
             title='Why not Testing? (April 2016)'
             labels={['meetup']}
           >
-            <div>Testing presentation for <a href='http://www.meetup.com/Code-Coffee-Vancouver/events/230135012/'>Code Coffee Vancouver</a>. Goal was to show that testing doesn't have to be perfect, any you can really start anywhere.</div>
+            <div>Testing presentation for <a href='http://www.meetup.com/Code-Coffee-Vancouver/events/230135012/'>Code Coffee Vancouver</a>. Goal was to show that testing doesn&apos;t have to be perfect, any you can really start anywhere.</div>
             <div><a href='https://www.youtube.com/watch?v=iPGSJVASCkc'>Youtube Recording</a></div>
           </ItemBlock>
           <ItemBlock

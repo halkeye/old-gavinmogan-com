@@ -1,12 +1,13 @@
 'use strict';
 import React from 'react';
+import PropTypes from 'prop-types';
 import Header from '../components/header.js';
 import ItemBlock from '../components/itemblock.js';
 
 export default class Volunteering extends React.Component {
   static get propTypes () {
     return {
-      url: React.PropTypes.object.isRequired
+      url: PropTypes.object.isRequired
     };
   }
   render () {
@@ -15,7 +16,7 @@ export default class Volunteering extends React.Component {
         <Header title='Projects' description='Some of the projects Gavin has worked on' url={this.props.url} />
         <div className='container'>
           <h1>Projects</h1>
-          <p>There's a lot more projects on my <a href='https://github.com/halkeye'><i className='fa fa-github'></i> Github</a></p>
+          <p>There&apos;s a lot more projects on my <a href='https://github.com/halkeye'><i className='fa fa-github'></i> Github</a></p>
           <ItemBlock
             key='saltystories'
             name='saltystories'
@@ -67,7 +68,7 @@ export default class Volunteering extends React.Component {
             link='https://www.npmjs.com/~halkeye'
             title='NPM Modules'
           >
-            <div>Various NPM modules I've published</div>
+            <div>Various NPM modules I&apos;ve published</div>
           </ItemBlock>
 
           <h2>Legacy / KodeKoan Projects</h2>

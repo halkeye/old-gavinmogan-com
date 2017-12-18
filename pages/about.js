@@ -1,11 +1,12 @@
 'use strict';
 import React from 'react';
+import PropTypes from 'prop-types';
 import Header from '../components/header.js';
 
 export default class About extends React.Component {
   static get propTypes () {
     return {
-      url: React.PropTypes.object.isRequired
+      url: PropTypes.object.isRequired
     };
   }
   constructor (props) {
@@ -29,8 +30,8 @@ export default class About extends React.Component {
   renderInput (field, name) {
     return (
       <div className="form-group">
-      <label htmlFor={field}>{name}</label>
-      <input type="text" className="form-control" id={field} placeholder={name} value={this.state.subject} onChange={this.handleChange.bind(this, field)} />
+        <label htmlFor={field}>{name}</label>
+        <input type="text" className="form-control" id={field} placeholder={name} value={this.state.subject} onChange={this.handleChange.bind(this, field)} />
       </div>
     );
   }
@@ -38,8 +39,8 @@ export default class About extends React.Component {
   renderText (field, name) {
     return (
       <div className="form-group">
-      <label htmlFor={field}> {name} </label>
-      <textarea id={field} className="form-control" rows="3" style={{ width: '100%' }} onChange={this.handleChange.bind(this, field)}>{this.state.body}</textarea>
+        <label htmlFor={field}> {name} </label>
+        <textarea id={field} className="form-control" rows="3" style={{ width: '100%' }} onChange={this.handleChange.bind(this, field)}>{this.state.body}</textarea>
       </div>
     );
   }

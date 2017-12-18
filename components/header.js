@@ -2,13 +2,14 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 
 export default class Header extends React.Component {
   static get propTypes () {
     return {
-      url: React.PropTypes.object.isRequired,
-      title: React.PropTypes.string,
-      description: React.PropTypes.string
+      url: PropTypes.object.isRequired,
+      title: PropTypes.string,
+      description: PropTypes.string
     };
   }
   static get defaultProps () {
@@ -69,15 +70,15 @@ export default class Header extends React.Component {
 
             <div className="">
               <ul className="nav navbar-nav">
-              {
-                pages.map((page, idx) => {
-                  if (this.props.url.pathname.indexOf(page[0]) === 0) {
-                    return (<li key={idx} className="active"><Link href={page[0]}><a>{page[1]} <span className="sr-only">(current)</span></a></Link></li>);
-                  } else {
-                    return (<li key={idx}><Link href={page[0]}><a>{page[1]} </a></Link></li>);
-                  }
-                })
-              }
+                {
+                  pages.map((page, idx) => {
+                    if (this.props.url.pathname.indexOf(page[0]) === 0) {
+                      return (<li key={idx} className="active"><Link href={page[0]}><a>{page[1]} <span className="sr-only">(current)</span></a></Link></li>);
+                    } else {
+                      return (<li key={idx}><Link href={page[0]}><a>{page[1]} </a></Link></li>);
+                    }
+                  })
+                }
               </ul>
             </div>
           </div>
