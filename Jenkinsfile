@@ -1,5 +1,3 @@
-properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/halkeye/docker-mineos/']])
-
 pipeline {
     agent any
 
@@ -13,13 +11,13 @@ pipeline {
                 sh 'docker build -t halkeye/gavinmogan.com .'
             }
         }
-        
+
         stage('Deploy') {
             when {
                 branch 'master'
             }
-            environment { 
-                DOCKER = credentials('dockerhub-halkeye') 
+            environment {
+                DOCKER = credentials('dockerhub-halkeye')
             }
             steps {
                 sh 'docker login --username $DOCKER_USR --password=$DOCKER_PSW'
