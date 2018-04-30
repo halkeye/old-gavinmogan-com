@@ -24,7 +24,7 @@ class Volunteering extends React.Component {
 
           <ItemBlock
             key="nodeschool-yvr"
-            img="/static/img/volunteering/nodeschool-yvr.png"
+            img="/static/img/volunteering/nodeschool-yvr.jpg"
             link="https://community.vancouvertech.com/groups/nodeschool"
             title="NodeSchool Vancouver"
           >
