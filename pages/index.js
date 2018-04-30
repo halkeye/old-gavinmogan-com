@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Projects from './projects';
+import { withRouter } from 'next/router';
 
-export default class Index extends React.Component {
+export class Index extends React.Component {
   static get propTypes () {
     return {
-      url: PropTypes.object.isRequired
+      router: PropTypes.object.isRequired
     };
   }
   render () {
-    return <Projects url={this.props.url} />;
+    return <Projects />;
   }
 }
+
+export default withRouter(Index);
