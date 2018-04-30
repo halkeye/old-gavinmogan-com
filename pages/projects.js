@@ -42,6 +42,29 @@ class Projects extends React.Component {
           </ItemBlock>
 
           <ItemBlock
+            key="flask-atlassian-connect"
+            name="flask-atlassian-connect"
+            link="https://halkeye.github.io/flask_atlassian_connect/"
+            title="Flask Atlassian Connect"
+          />
+
+          <ItemBlock
+            key="hipchat-dance-party"
+            name="hipchat-dance-party"
+            link="https://devpost.com/software/hipchat-dance-party-service"
+            title="Hipchat Dance Party"
+            labels={['saucelabs']}
+          />
+
+          <ItemBlock
+            key="jira-cloud-bamboohr"
+            name="jira-cloud-bamboohr"
+            link="https://saucelabs.com/blog/jira-cloud-and-bamboohr-integration"
+            title="Jira Cloud and BambooHR addon"
+            labels={['saucelabs']}
+          />
+
+          <ItemBlock
             key="zabox"
             name="zabox"
             link="http://zabox.gavinmogan.com/"
@@ -105,29 +128,6 @@ class Projects extends React.Component {
           >
             <div>Various NPM modules I&apos;ve published</div>
           </ItemBlock>
-
-          <ItemBlock
-            key="flask-atlassian-connect"
-            name="flask-atlassian-connect"
-            link="https://halkeye.github.io/flask_atlassian_connect/"
-            title="Flask Atlassian Connect"
-          />
-
-          <ItemBlock
-            key="hipchat-dance-party"
-            name="hipchat-dance-party"
-            link="https://devpost.com/software/hipchat-dance-party-service"
-            title="Hipchat Dance Party"
-            labels={['saucelabs']}
-          />
-
-          <ItemBlock
-            key="jira-cloud-bamboohr"
-            name="jira-cloud-bamboohr"
-            link="https://saucelabs.com/blog/jira-cloud-and-bamboohr-integration"
-            title="Jira Cloud and BambooHR addon"
-            labels={['saucelabs']}
-          />
 
           <h2>Legacy / KodeKoan Projects</h2>
 
