@@ -3,17 +3,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/header.js';
 import ItemBlock from '../components/itemblock.js';
+import { withRouter } from 'next/router'
 
-export default class Volunteering extends React.Component {
+export class Presentations extends React.Component {
   static get propTypes () {
     return {
-      url: PropTypes.object.isRequired
+      router: PropTypes.object.isRequired
     };
   }
   render () {
     return (
       <div>
-        <Header title='Presentations' description='The presentations Gavin has given' url={this.props.url} />
+        <Header title='Presentations' description='The presentations Gavin has given' pathname={this.props.router.pathname} />
         <div className='container'>
           <h1>Presentations</h1>
           <ItemBlock
@@ -120,3 +121,5 @@ export default class Volunteering extends React.Component {
     );
   }
 }
+
+export default withRouter(Presentations)

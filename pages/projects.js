@@ -13,7 +13,6 @@ export class Volunteering extends React.Component {
     };
   }
   render () {
-    console.log('url', this.props.router.pathname);
     return (
       <div>
         <Header title='Projects' description='Some of the projects Gavin has worked on' pathname={this.props.router.pathname} />
@@ -171,4 +170,3 @@ export class Volunteering extends React.Component {
 }
 
 export default withRouter(Volunteering)
-
