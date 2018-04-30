@@ -3,12 +3,12 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import Index from './index.js';
+import Projects from './projects.js';
 
-describe('Index', () => {
+describe('Projects', () => {
   it('Renders', () => {
     const app = shallow(
-      <Index
+      <Projects
         router={{
           pathname: '/'
         }}
