@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/header.js';
-import { withRouter } from 'next/router'
+import { withRouter } from 'next/router';
 
 export class About extends React.Component {
   static get propTypes () {
@@ -74,4 +74,4 @@ export class About extends React.Component {
   }
 }
 
-export default withRouter(About)
+export default withRouter(About);

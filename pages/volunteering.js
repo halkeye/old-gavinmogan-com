@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/header.js';
 import ItemBlock from '../components/itemblock.js';
-import { withRouter } from 'next/router'
+import { withRouter } from 'next/router';
 
 export class Volunteering extends React.Component {
   static get propTypes () {
@@ -44,4 +44,4 @@ export class Volunteering extends React.Component {
   }
 }
 
-export default withRouter(Volunteering)
+export default withRouter(Volunteering);
