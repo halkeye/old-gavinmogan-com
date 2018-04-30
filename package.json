@@ -1,10 +1,19 @@
 {
   "name": "gavinmogan_dot_com",
+  "private": true,
   "version": "0.0.1",
+  "description": "My personal website",
+  "author": "Gavin Mogan <github@gavinmogan.com>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halkeye/gavinmogan.com.git"
+  },
   "scripts": {
     "dev": "next",
-    "build": "eslint . && next build",
-    "start": "next start"
+    "lint": "eslint .",
+    "test": "jest",
+    "build": "nextein build && nextein export"
   },
   "dependencies": {
     "ga-react-router": "^2.1.0",
@@ -25,9 +34,10 @@
     "eslint-plugin-react": "^7.1.0",
     "eslint-plugin-standard": "^3.0.1",
     "jest": "^22.4.3",
+    "nextein": "^1.2.3",
     "prettier-eslint-cli": "^4.7.1"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=10.0.0"
   }
 }
