@@ -5,7 +5,7 @@ import Header from '../components/header.js';
 import ItemBlock from '../components/itemblock.js';
 import { withRouter } from 'next/router';
 
-export class Volunteering extends React.Component {
+class Volunteering extends React.Component {
   static get propTypes () {
     return {
       router: PropTypes.object.isRequired

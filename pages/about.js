@@ -25,9 +25,9 @@ export class About extends React.Component {
   }
 
   handleChange (field, event) {
-    var data = {};
-    data[field] = event.target.value;
-    this.setState(data);
+    this.setState({
+      [field]: event.target.value
+    });
   }
 
   renderInput (field, name) {

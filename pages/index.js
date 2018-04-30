@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Projects from './projects';
 import { withRouter } from 'next/router';
 
-export class Index extends React.Component {
+class Index extends React.Component {
   static get propTypes () {
     return {
       router: PropTypes.object.isRequired
