@@ -17,6 +17,13 @@ export default class Volunteering extends React.Component {
         <div className='container'>
           <h1>Presentations</h1>
           <ItemBlock
+            key='jenkins-world-2017-gavinmogan-saucelabs'
+            name='jenkins-world-2017-gavinmogan-saucelabs'
+            link='https://www.youtube.com/watch?v=hshD-a2YHCs'
+            title='Jenkins World 2017 w/ Gavin Mogan, Sauce Labs'
+            labels={[]}
+          />
+          <ItemBlock
             key='codecoffee-no-rest-for-the-wicked'
             name='codecoffee-no-rest-for-the-wicked'
             link='http://slides.com/halkeye/no-rest-for-the-wicked'
