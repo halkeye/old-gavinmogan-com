@@ -2,11 +2,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/header.js';
+import { withRouter } from 'next/router'
 
-export default class About extends React.Component {
+export class About extends React.Component {
   static get propTypes () {
     return {
-      url: PropTypes.object.isRequired
+      router: PropTypes.object.isRequired
     };
   }
   constructor (props) {
@@ -48,7 +49,7 @@ export default class About extends React.Component {
   render () {
     return (
       <div>
-        <Header title='About' description='About Gavin Mogan' url={this.props.url} />
+        <Header title='About' description='About Gavin Mogan' pathname={this.props.router.pathname} />
         <div className="container">
           <h1>Gavin Mogan</h1>
           <p>Part Developer, Part Sysadmin, Part problem solver. All around nerd.</p>
@@ -72,3 +73,5 @@ export default class About extends React.Component {
     );
   }
 }
+
+export default withRouter(About)

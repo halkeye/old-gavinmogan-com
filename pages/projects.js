@@ -6,7 +6,7 @@ import ItemBlock from '../components/itemblock.js';
 
 import { withRouter } from 'next/router'
 
-export class Volunteering extends React.Component {
+export class Projects extends React.Component {
   static get propTypes () {
     return {
       router: PropTypes.object.isRequired
@@ -169,4 +169,4 @@ export class Volunteering extends React.Component {
   }
 }
 
-export default withRouter(Volunteering)
+export default withRouter(Projects)
