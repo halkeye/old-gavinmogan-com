@@ -22,7 +22,8 @@ export class Presentations extends React.Component {
             name='jenkins-world-2017-gavinmogan-saucelabs'
             link='https://www.youtube.com/watch?v=hshD-a2YHCs'
             title='Jenkins World 2017 w/ Gavin Mogan, Sauce Labs'
-            labels={[]}
+            labels={['saucelabs', 'work', 'interview']}
+            img='/static/img/presentations/devops.png'
           />
           <ItemBlock
             key='codecoffee-no-rest-for-the-wicked'
