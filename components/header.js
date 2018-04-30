@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 export default class Header extends React.Component {
   static get propTypes () {
     return {
-      url: PropTypes.object.isRequired,
+      pathname: PropTypes.string.isRequired,
       title: PropTypes.string,
       description: PropTypes.string
     };
@@ -19,6 +19,7 @@ export default class Header extends React.Component {
     };
   }
   render () {
+    const { pathname } = this.props;
     const title = ['Gavin Mogan Dot Com', this.props.title].filter(n => n).reverse().join(' - ');
     const pages = [
       ['/projects', 'Projects'],
@@ -63,8 +64,10 @@ export default class Header extends React.Component {
         <nav className="navbar navbar-default">
           <div className="container-fluid">
             <div className="navbar-header">
-              <Link href="/" className='navbar-brand navBarBrandStyle'>
-                <img src='/static/img/Gavin-December-1989.png' className='navBarBrandImgStyle'/>
+              <Link href="/">
+                <a className='navbar-brand navBarBrandStyle'>
+                  <img src='/static/img/Gavin-December-1989.png' className='navBarBrandImgStyle'/>
+                </a>
               </Link>
             </div>
 
@@ -72,7 +75,7 @@ export default class Header extends React.Component {
               <ul className="nav navbar-nav">
                 {
                   pages.map((page, idx) => {
-                    if (this.props.url.pathname.indexOf(page[0]) === 0) {
+                    if (pathname.indexOf(page[0]) === 0) {
                       return (<li key={idx} className="active"><Link href={page[0]}><a>{page[1]} <span className="sr-only">(current)</span></a></Link></li>);
                     } else {
                       return (<li key={idx}><Link href={page[0]}><a>{page[1]} </a></Link></li>);

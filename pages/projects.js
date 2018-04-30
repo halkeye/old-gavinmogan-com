@@ -4,16 +4,19 @@ import PropTypes from 'prop-types';
 import Header from '../components/header.js';
 import ItemBlock from '../components/itemblock.js';
 
-export default class Volunteering extends React.Component {
+import { withRouter } from 'next/router'
+
+export class Volunteering extends React.Component {
   static get propTypes () {
     return {
-      url: PropTypes.object.isRequired
+      router: PropTypes.object.isRequired
     };
   }
   render () {
+    console.log('url', this.props.router.pathname);
     return (
       <div>
-        <Header title='Projects' description='Some of the projects Gavin has worked on' url={this.props.url} />
+        <Header title='Projects' description='Some of the projects Gavin has worked on' pathname={this.props.router.pathname} />
         <div className='container'>
           <h1>Projects</h1>
           <p>There&apos;s a lot more projects on my <a href='https://github.com/halkeye'><i className='fa fa-github'></i> Github</a></p>
@@ -166,3 +169,6 @@ export default class Volunteering extends React.Component {
     );
   }
 }
+
+export default withRouter(Volunteering)
+
