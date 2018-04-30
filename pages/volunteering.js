@@ -38,11 +38,6 @@ export class Volunteering extends React.Component {
             link="https://yvrdev.herokuapp.com"
             title="Vancouver Developers Slack"
           />
-
-          <ItemBlock key="cascadiajs"
-            link="http://slack.cascadiajs.com/"
-            title="CascadiaJS Slack"
-          />
         </div>
       </div>
     );
