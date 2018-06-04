@@ -32,7 +32,7 @@
     "eslint-plugin-jest": "^21.15.1",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.3.0",
-    "eslint-plugin-react": "^7.1.0",
+    "eslint-plugin-react": "^7.9.1",
     "eslint-plugin-standard": "^3.0.1",
     "jest": "^22.4.3",
     "nextein": "^1.2.3",
